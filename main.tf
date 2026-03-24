@@ -1,5 +1,6 @@
 resource "aws_security_group" "example" {
-  vpc_id = aws_vpc.example.id
+  vpc_id = var.vpc_id
+  name = var.sg_name
 
   egress {
     from_port        = 0
